@@ -51,12 +51,10 @@ class FrameworkList extends React.Component {
   render() {
     let frameworkCards = this.state.frameworks.map(framework => {
       return (
-        <div className="card-framework">
-          <FrameworkCard
-            header={framework.header}
-            description={framework.description}
-          />
-        </div>
+        <FrameworkCard
+          header={framework.header}
+          description={framework.description}
+        />
       );
     });
     return <div className="card-container">{frameworkCards}</div>;

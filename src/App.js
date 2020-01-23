@@ -6,6 +6,28 @@ import FrameworkList from "./components/FrameworkList";
 export default function App() {
   return (
     <Router>
+      <Link to="/">Home</Link>
+      <Link to="/flowchart">Flowchart</Link>
+      <Link to="/frameworks">Frameworks</Link>
+
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/flowchart">
+          <Flowchart />
+        </Route>
+        <Route path="/frameworks">
+          <Frameworks />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
       <div className="App">
         <h1>Front-end frameworks</h1>
         <p>
@@ -17,31 +39,8 @@ export default function App() {
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
-        <Link to="/">Home</Link>
-        <Link to="/flowchart">Flowchart</Link>
-        <Link to="/frameworks">Frameworks</Link>
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/flowchart">
-            <Flowchart />
-          </Route>
-          <Route path="/frameworks">
-            <Frameworks />
-          </Route>
-        </Switch>
+        <FrameworkList></FrameworkList>
       </div>
-    </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-      <FrameworkList></FrameworkList>
     </div>
   );
 }

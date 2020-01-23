@@ -9,37 +9,37 @@ class FrameworkList extends React.Component {
     this.state = {
       frameworks: [
         {
-          header: "React",
+          title: "React",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
         },
         {
-          header: "Vue.JS",
+          title: "Vue.JS",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
         },
         {
-          header: "Angular",
+          title: "Angular",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
         },
         {
-          header: "Ember",
+          title: "Ember",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
         },
         {
-          header: "Svelte",
+          title: "Svelte",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
         },
         {
-          header: "Knockout",
+          title: "Knockout",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
           logo: ""
@@ -52,7 +52,7 @@ class FrameworkList extends React.Component {
     let frameworkCards = this.state.frameworks.map(framework => {
       return (
         <FrameworkCard
-          header={framework.header}
+          title={framework.title}
           description={framework.description}
         />
       );

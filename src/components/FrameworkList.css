@@ -26,10 +26,14 @@
 .card-framework {
   width: 100%;
   text-align: left;
-  border: 1px solid chocolate;
+  border: 2px solid chocolate;
   padding: 20px 15px 15px 20px;
   display: grid;
   grid-template-columns: auto auto;
+}
+
+.card-framework:hover {
+  border: 2px solid #ffd700;
 }
 
 .card-header {

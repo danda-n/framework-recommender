@@ -1,6 +1,6 @@
 import React from "react";
 import "./FrameworkList.css";
-import logo_react from "../images/logo_react.png";
+// import logo_react from "../images/logo_react.png";
 
 class FrameworkList extends React.Component {
   render() {
@@ -9,9 +9,7 @@ class FrameworkList extends React.Component {
         <div className="container-left">
           <div className="card-framework">
             <div className="card-left">
-              <div className="card-logo">
-                <img></img>
-              </div>
+              <div className="card-logo"></div>
             </div>
             <div className="card-right">
               <div className="card-header">React JS</div>

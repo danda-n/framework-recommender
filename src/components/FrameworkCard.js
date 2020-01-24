@@ -4,8 +4,7 @@ class FrameworkCard extends React.Component {
   render() {
     return (
       <div className="card-framework">
-        {/* <div className="card-logo">{this.props.logo}</div> */}
-        <div className="card-header">{this.props.title}</div>
+        <div className="card-title">{this.props.title}</div>
         <div className="card-content">{this.props.description}</div>
       </div>
     );

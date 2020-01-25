@@ -1,19 +1,19 @@
 import React from "react";
 import "./FrameworkList.css";
 import FrameworkCard from "./FrameworkCard";
-import Framework from "./Framework";
+import FrameworkDataArray from "./FrameworkDataArray";
 
 export default class FrameworkList extends React.Component {
   render() {
-    // const { Framework } = this.state;
     return (
       <div className="card-container">
-        {Framework.map((framework, i) => {
+        {FrameworkDataArray.map((frameworks, i) => {
           return (
-            <FrameworkCard key={i}>
-              title = {framework.title}
-              description = {framework.description}
-            </FrameworkCard>
+            <FrameworkCard
+              key={i}
+              title={frameworks.title}
+              description={frameworks.description}
+            />
           );
         })}
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import FrameworkList from "./components/FrameworkList";
+import FrameworkDataArray from "./components/FrameworkDataArray";
 
 export default function App() {
   return (
@@ -65,6 +66,9 @@ function Frameworks() {
         mollit anim id est laborum.
       </p>
       <hr />
+      <div>
+        <FrameworkDataArray></FrameworkDataArray>
+      </div>
     </div>
   );
 }

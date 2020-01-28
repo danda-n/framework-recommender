@@ -16,13 +16,13 @@
 .header-title {
   color: #61dafb;
   font-weight: bold;
-  font-size: 55px;
+  font-size: 8vh;
 }
 
 .header-subtitle {
   color: whitesmoke;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 2.5vh;
 }
 
 .page-content {
@@ -31,10 +31,34 @@
   width: 80%;
 }
 
+.page-content-1 {
+  flex: 4 0 0%;
+}
+
+.content-framework-desc {
+  width: 60%;
+  font-family: Calibri;
+}
+.page-content-2 {
+  flex: 3 0 0%;
+}
+
+.content-framework-features {
+  width: 60%;
+}
+
+.spacing-1px {
+  letter-spacing: 1px;
+}
+
 .space-small {
   height: 10px;
 }
 
 .space-normal {
   height: 20px;
+}
+
+.space-large {
+  height: 60px;
 }

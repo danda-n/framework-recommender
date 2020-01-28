@@ -3,62 +3,35 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import FrameworkList from "./components/FrameworkList";
 import FrameworkPage from "./components/FrameworkPage";
+import HomePage from "./components/HomePage";
 
 export default function App() {
   return (
     <Router>
-      <Link to="/">Home</Link>
-      <Link to="/flowchart">Flowchart</Link>
-      <Link to="/frameworks">Frameworks</Link>
-
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/flowchart">
-          <Flowchart />
-        </Route>
-        <Route path="/frameworks">
-          <Frameworks />
-        </Route>
-      </Switch>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          {/* <Route path="/flowchart">
+            <Flowchart />
+          </Route> */}
+          <Route path="/frameworks">
+            <FrameworkPage />
+          </Route>
+        </Switch>
+      </Layout>
     </Router>
   );
 }
 
-function Home() {
+function Layout(props) {
   return (
-    <div className="App">
-      <h1>Front-end frameworks</h1>
-      <p>
-        This is a simple hero unit, a simple Jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
-      <hr />
-      <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
-      </p>
-      <FrameworkList></FrameworkList>
-    </div>
-  );
-}
-
-function Flowchart() {
-  return (
-    <div>
-      <h2>Flowchart</h2>
-    </div>
-  );
-}
-
-function Frameworks() {
-  return (
-    <div className="Frameworks">
-      <hr />
-      <div>
-        <FrameworkPage></FrameworkPage>
-      </div>
+    <div className="container">
+      <Link to="/">Home</Link>
+      {/* <Link to="/flowchart">Flowchart</Link> */}
+      <Link to="/frameworks">Frameworks</Link>
+      {props.children}
     </div>
   );
 }

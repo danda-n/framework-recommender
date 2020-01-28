@@ -18,3 +18,8 @@
 .App-link {
   color: #61dafb;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}

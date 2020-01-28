@@ -7,12 +7,6 @@
   align-items: center;
 }
 
-.page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .header-title {
   color: #61dafb;
   font-weight: bold;
@@ -29,6 +23,7 @@
   display: flex;
   justify-content: center;
   width: 80%;
+  padding: 60px 10%;
 }
 
 .page-content-1 {
@@ -36,15 +31,16 @@
 }
 
 .content-framework-desc {
-  width: 60%;
+  width: 80%;
   font-family: Calibri;
 }
 .page-content-2 {
   flex: 3 0 0%;
+  padding: 0 10% 0 20%;
 }
 
 .content-framework-features {
-  width: 60%;
+  width: 80%;
 }
 
 .spacing-1px {

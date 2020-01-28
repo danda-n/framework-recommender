@@ -15,10 +15,10 @@ export default class FrameworkPage extends React.Component {
             </div>
           </div>
         </header>
-        <div className="space-large"></div>
         <div className="page-content">
           <div className="page-content-1">
             <div className="content-framework-desc spacing-1px">
+              <h3>ReactJS</h3>
               React (also known as React.js or ReactJS) is a JavaScript library
               for building user interfaces. It is maintained by Facebook and a
               community of individual developers and companies. React can be

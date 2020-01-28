@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Layout.css";
 
 export default class Layout extends React.Component {
   render() {

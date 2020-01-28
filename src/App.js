@@ -1,9 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import FrameworkList from "./components/FrameworkList";
+// import FrameworkList from "./components/FrameworkList";
 import FrameworkPage from "./components/FrameworkPage";
 import HomePage from "./components/HomePage";
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
@@ -22,16 +23,5 @@ export default function App() {
         </Switch>
       </Layout>
     </Router>
-  );
-}
-
-function Layout(props) {
-  return (
-    <div className="container">
-      <Link to="/">Home</Link>
-      {/* <Link to="/flowchart">Flowchart</Link> */}
-      <Link to="/frameworks">Frameworks</Link>
-      {props.children}
-    </div>
   );
 }

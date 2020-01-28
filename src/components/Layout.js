@@ -1,11 +1,14 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class Layout extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Link>{this.props.children}</Link>
+        <Link to="/">Home</Link>
+        {/* <Link to="/flowchart">Flowchart</Link> */}
+        <Link to="/frameworks">Frameworks</Link>
+        {this.props.children}
       </div>
     );
   }

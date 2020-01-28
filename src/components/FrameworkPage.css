@@ -1,0 +1,40 @@
+.page-header {
+  min-height: 15em;
+  text-align: center;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title {
+  color: #61dafb;
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.header-subtitle {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.space-small {
+  height: 10px;
+}
+
+.space-normal {
+  height: 20px;
+}

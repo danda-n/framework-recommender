@@ -74,15 +74,14 @@ export default class FrameworkPage extends React.Component {
           <div className="page-content-2">
             <div className="content-framework-features">
               <h3>Features</h3>
-              React (also known as React.js or ReactJS) is a JavaScript library
-              for building user interfaces. It is maintained by Facebook and a
-              community of individual developers and companies. React can be
-              used as a base in the development of single-page or mobile
-              applications. However React is only concerned with rendering data
-              to the DOM and so creating React applications usually requires the
-              use of additional libraries for state management, routing, and
-              interaction with an API. Redux, React Router and axios are
-              respective examples of such libraries.
+              <h4>Advantages</h4>
+              <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+              </ul>
             </div>
           </div>
         </div>

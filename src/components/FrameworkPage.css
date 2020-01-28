@@ -16,18 +16,25 @@
 .header-subtitle {
   color: whitesmoke;
   font-weight: bold;
-  font-size: 2.5vh;
+  font-size: 3vh;
 }
 
 .page-content {
   display: flex;
   justify-content: center;
-  width: 80%;
+  max-width: 1080px;
   padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.page-content-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 .page-content-1 {
   flex: 4 0 0%;
+  min-width: 300px;
 }
 
 .content-framework-desc {
@@ -37,10 +44,15 @@
 .page-content-2 {
   flex: 3 0 0%;
   padding: 0 10% 0 20%;
+  min-width: 300px;
 }
 
 .content-framework-features {
   width: 80%;
+}
+
+.li-none {
+  list-style: none;
 }
 
 .spacing-1px {

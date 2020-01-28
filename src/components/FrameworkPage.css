@@ -17,6 +17,7 @@
   color: whitesmoke;
   font-weight: bold;
   font-size: 3vh;
+  padding: 0 5%;
 }
 
 .page-content {
@@ -34,7 +35,7 @@
 
 .page-content-1 {
   flex: 4 0 0%;
-  min-width: 300px;
+  min-width: 30vmin;
 }
 
 .content-framework-desc {
@@ -43,16 +44,20 @@
 }
 .page-content-2 {
   flex: 3 0 0%;
-  padding: 0 10% 0 20%;
-  min-width: 300px;
-}
-
-.content-framework-features {
-  width: 80%;
+  min-width: 30vmin;
+  text-align: right;
 }
 
 .li-none {
   list-style: none;
+}
+
+.li-none > li {
+  margin: 10px;
+}
+
+.li-none > li:hover {
+  text-shadow: 1px 1px 2px #61dafb;
 }
 
 .spacing-1px {

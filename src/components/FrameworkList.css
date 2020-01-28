@@ -7,17 +7,20 @@
 .card-framework {
   width: 25%;
   text-align: left;
-  border: 2px solid chocolate;
+  border: 2px solid #1d1e22;
+  box-shadow: 1px 1px 1px #1d1e22;
   padding: 20px 15px 15px 20px;
   margin: 1em auto;
 }
 
 .card-framework:hover {
-  border: 2px solid #ffd700;
+  border: 2px solid #feda6a;
+  box-shadow: 1px 1px 1px #feda6a;
+  cursor: pointer;
 }
 
 .card-title {
-  color: brown;
+  color: d4d4dc;
   font-weight: bold;
 }
 

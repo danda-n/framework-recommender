@@ -6,11 +6,22 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <div className="app-navigation">
-          <Link to="/">Home</Link>
-          {/* <Link to="/flowchart">Flowchart</Link> */}
-          <Link to="/frameworks">Frameworks</Link>
-        </div>
+        <header>
+          <div className="app-navigation">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/frameworks">Frameworks</Link>
+              </li>
+              <li>
+                <Link to="/flowchart">Flowchart</Link>
+              </li>
+            </ul>
+          </div>
+        </header>
+
         <div className="app-content">{this.props.children}</div>
       </div>
     );

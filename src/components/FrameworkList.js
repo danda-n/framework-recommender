@@ -12,7 +12,7 @@ export default class FrameworkList extends React.Component {
             <FrameworkCard
               key={i}
               title={frameworks.title}
-              description={frameworks.description}
+              description={frameworks.description_card}
             />
           );
         })}

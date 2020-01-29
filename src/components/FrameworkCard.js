@@ -1,23 +1,20 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-class FrameworkCard extends React.Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
+const FrameworkCard = props => {
+  let history = useHistory();
+  console.log(props.title);
+
+  function handleClick() {
+    history.push("/frameworks");
   }
 
-  handleClick() {
-    console.log("click");
-  }
-
-  render() {
-    return (
-      <div className="card-framework" onClick={this.handleClick}>
-        <div className="card-title">{this.props.title}</div>
-        <div className="card-content">{this.props.description}</div>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="card-framework" onClick={handleClick}>
+      <div className="card-title">{props.title}</div>
+      <div className="card-content">{props.description}</div>
+    </div>
+  );
+};
 
 export default FrameworkCard;

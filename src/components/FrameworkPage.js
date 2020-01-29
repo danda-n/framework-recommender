@@ -9,7 +9,6 @@ export default class FrameworkPage extends React.Component {
         <header className="page-header">
           <div className="page-titles">
             <div className="header-title">React</div>
-            <div className="space-normal"></div>
             <div className="header-subtitle">
               A JavaScript library for building user interfaces
             </div>
@@ -20,29 +19,34 @@ export default class FrameworkPage extends React.Component {
             <div className="page-content-1">
               <div className="content-framework-desc spacing-1px">
                 <h2>ReactJS</h2>
-                React (also known as React.js or ReactJS) is a JavaScript
-                library for building user interfaces. It is maintained by
-                Facebook and a community of individual developers and companies.
-                React can be used as a base in the development of single-page or
-                mobile applications. However React is only concerned with
-                rendering data to the DOM and so creating React applications
-                usually requires the use of additional libraries for state
-                management, routing, and interaction with an API. Redux, React
-                Router and axios are respective examples of such libraries.
+                <p>
+                  React (also known as React.js or ReactJS) is a JavaScript
+                  library for building user interfaces. It is maintained by
+                  Facebook and a community of individual developers and
+                  companies. React can be used as a base in the development of
+                  single-page or mobile applications. However React is only
+                  concerned with rendering data to the DOM and so creating React
+                  applications usually requires the use of additional libraries
+                  for state management, routing, and interaction with an API.
+                  Redux, React Router and axios are respective examples of such
+                  libraries.
+                </p>
+
                 <div className="content-framework-2 spacing-1px">
                   <h3>Declarative</h3>
                   <p>
                     React makes it painless to create interactive UIs. Design
                     simple views for each state in your application, and React
                     will efficiently update and render just the right components
-                    when your data changes.
+                    when your data changes. Declarative views make your code
+                    more predictable and easier to debug.
                   </p>
                   <p>
                     Declarative views make your code more predictable and easier
                     to debug.
                   </p>
                 </div>
-                <div className="content-framework-3 spacing-1px">
+                <div className="content-framework-2 spacing-1px">
                   <h3>Component-Based</h3>
                   <p>
                     Build encapsulated components that manage their own state,
@@ -54,7 +58,7 @@ export default class FrameworkPage extends React.Component {
                     and keep state out of the DOM.
                   </p>
                 </div>
-                <div className="content-framework-3 spacing-1px">
+                <div className="content-framework-2 spacing-1px">
                   <h3>Learn Once, Write Everywhere</h3>
                   <p>
                     We don’t make assumptions about the rest of your technology

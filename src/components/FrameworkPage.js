@@ -1,5 +1,5 @@
 import React from "react";
-import "./FrameworkPage.css";
+import "../css/FrameworkPage.css";
 // import FrameworkDataArray from "./FrameworkDataArray";
 
 export default class FrameworkPage extends React.Component {

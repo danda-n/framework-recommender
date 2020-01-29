@@ -1,5 +1,5 @@
 import React from "react";
-import "./FrameworkList.css";
+import "../css/FrameworkList.css";
 import FrameworkCard from "./FrameworkCard";
 import FrameworkDataArray from "./FrameworkDataArray";
 

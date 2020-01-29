@@ -8,7 +8,7 @@ export default class FrameworkPage extends React.Component {
       <div className="page-container">
         <header className="page-header">
           <div className="page-titles">
-            <div className="header-title">React</div>
+            <div className="header-title">React.js</div>
             <div className="space-normal"></div>
             <div className="header-subtitle">
               A JavaScript library for building user interfaces

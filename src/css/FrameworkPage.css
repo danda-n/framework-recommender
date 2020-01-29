@@ -38,7 +38,6 @@
 
 .page-content-1 {
   flex: 4 0 0%;
-  min-width: 30vmin;
 }
 
 .content-framework-desc {
@@ -47,7 +46,6 @@
 }
 .page-content-2 {
   flex: 3 0 0%;
-  min-width: 30vmin;
   text-align: right;
 }
 

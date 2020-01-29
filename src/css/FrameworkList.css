@@ -16,11 +16,10 @@
 .card-framework:hover {
   border: 2px solid #feda6a;
   box-shadow: 1px 1px 1px #feda6a;
-  cursor: pointer;
 }
 
 .card-title {
-  color: d4d4dc;
+  color: #9c6b3b;
   font-weight: bold;
 }
 

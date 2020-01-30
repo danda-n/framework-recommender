@@ -4,22 +4,18 @@ import "./App.css";
 import FrameworkPage from "./components/FrameworkPage";
 import FrameworkPage_new from "./components/FrameworkPage_new";
 import HomePage from "./components/HomePage";
+import Flowchart from "./components/Flowchart";
 import Layout from "./components/Layout";
+import FrameworkCard from "./components/FrameworkCard";
 
 export default function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          {/* <Route path="/flowchart">
-            <Flowchart />
-          </Route> */}
-          <Route path="/frameworks">
-            <FrameworkPage />
-          </Route>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/flowchart" component={Flowchart} />
+          <Route path="/frameworks" component={FrameworkPage_new} />
         </Switch>
       </Layout>
     </Router>

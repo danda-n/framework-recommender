@@ -6,7 +6,6 @@ import FrameworkPage_new from "./components/FrameworkPage_new";
 import HomePage from "./components/HomePage";
 import Flowchart from "./components/Flowchart";
 import Layout from "./components/Layout";
-import FrameworkCard from "./components/FrameworkCard";
 
 export default function App() {
   return (
@@ -15,7 +14,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/flowchart" component={Flowchart} />
-          <Route path="/frameworks" component={FrameworkPage_new} />
+          <Route path="/frameworks/:title" component={FrameworkPage} />
         </Switch>
       </Layout>
     </Router>

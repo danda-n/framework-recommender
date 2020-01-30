@@ -6,7 +6,7 @@ const FrameworkCard = props => {
 
   function handleClick() {
     console.log(props.title);
-    history.push("/frameworks/");
+    history.push("/frameworks/:title");
   }
   return (
     <div className="card-framework" onClick={handleClick}>

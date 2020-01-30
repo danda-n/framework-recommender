@@ -1,11 +1,10 @@
 import React from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const FrameworkCard = props => {
   let history = useHistory();
 
   function handleClick() {
-    console.log(props.title);
     history.push(`/frameworks/${props.title}`);
   }
   return (

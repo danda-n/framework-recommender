@@ -14,7 +14,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/flowchart" component={Flowchart} />
-          <Route path="/frameworks/" component={FrameworkPage} />
+          <Route path="/frameworks/:title" component={FrameworkPage_new} />
         </Switch>
       </Layout>
     </Router>

@@ -20,12 +20,14 @@ export default class FrameworkPage_new extends React.Component {
             <div className="page-content-1">
               <div className="content-framework-desc spacing-1px">
                 <h2>{frameworkData.title}</h2>
-                <p>{frameworkData.description.d_main}</p>
-                {frameworkData.description.d_h.map((dh, m) => (
-                  <h3 key={m}>{dh}</h3>
-                ))}
-                {frameworkData.description.d_p.map((dp, n) => (
-                  <p key={n}>{dp}</p>
+                <p>{frameworkData.description_card}</p>
+                {frameworkData.description.map((desc, i) => (
+                  <div className="content-framework-2 spacing-1px">
+                    <h3>{desc.heading}</h3>
+                    {desc.paragraph.map((par, k) => (
+                      <p key={k}>{par}</p>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
@@ -34,14 +36,14 @@ export default class FrameworkPage_new extends React.Component {
                 <h2>Features</h2>
                 <h4>Advantages</h4>
                 <ul className="li-none">
-                  {frameworkData.advantages.map((adv, j) => (
-                    <li key={j}>{adv}</li>
+                  {frameworkData.advantages.map((adv, i) => (
+                    <li key={i}>{adv}</li>
                   ))}
                 </ul>
                 <h4>Disadvantages</h4>
                 <ul className="li-none">
-                  {frameworkData.disadvantages.map((disadv, k) => (
-                    <li key={k}>{disadv}</li>
+                  {frameworkData.disadvantages.map((disadv, i) => (
+                    <li key={i}>{disadv}</li>
                   ))}
                 </ul>
               </div>

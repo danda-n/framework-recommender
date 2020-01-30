@@ -12,9 +12,9 @@ export default class Layout extends React.Component {
               <li>
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/frameworks">Frameworks</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/flowchart">Flowchart</Link>
               </li>

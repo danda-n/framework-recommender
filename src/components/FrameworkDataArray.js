@@ -49,7 +49,7 @@ const frameworks = [
     uses: ""
   },
   {
-    title: "Vue.JS",
+    title: "VueJS",
     description_card:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra et ultrices neque ornare. Ipsum dolor sit amet consectetur adipiscing.",
     description: [
@@ -158,12 +158,6 @@ const frameworks = [
         paragraph: [
           "Build encapsulated components that manage their own state, then compose them to make complex UIs.",
           "Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM."
-        ]
-      },
-      {
-        heading: "Lorem ipsum",
-        paragraph: [
-          "We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code."
         ]
       }
     ],

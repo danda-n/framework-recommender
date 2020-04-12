@@ -26,9 +26,9 @@
   max-width: 1080px;
   padding: 60px 10%;
   flex-wrap: wrap;
-  background-image: url("../images/logo_react_2.png");
+  /* background-image: url("../images/logo_react_2.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
 }
 
 .page-content-wrap {

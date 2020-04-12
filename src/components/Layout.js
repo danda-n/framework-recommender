@@ -16,7 +16,13 @@ export default class Layout extends React.Component {
                 <Link to="/frameworks">Frameworks</Link>
               </li> */}
               <li>
-                <Link to="/flowchart">Flowchart</Link>
+                <Link to="/flowchart">Attribute based</Link>
+              </li>
+              <li>
+                <Link to="/papi">PAPI based</Link>
+              </li>
+              <li>
+                <Link to="/solution">The solution</Link>
               </li>
             </ul>
           </div>

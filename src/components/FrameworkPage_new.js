@@ -22,7 +22,7 @@ export default class FrameworkPage_new extends React.Component {
                 <h2>{frameworkData.title}</h2>
                 <p>{frameworkData.description_card}</p>
                 {frameworkData.description.map((desc, i) => (
-                  <div className="content-framework-2 spacing-1px">
+                  <div key={i} className="content-framework-2 spacing-1px">
                     <h3>{desc.heading}</h3>
                     {desc.paragraph.map((par, k) => (
                       <p key={k}>{par}</p>

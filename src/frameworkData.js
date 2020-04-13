@@ -1,31 +1,38 @@
 export const ATTRIBUTE = {
   DOCUMENTATION: {
     name: "documentation",
-    weight: 0.45
+    weight: 0.45,
+    humanReadableName: "Documentation"
   },
   LEARNING_CURVE: {
     name: "learning_curve",
-    weight: 0.5
+    weight: 0.5,
+    humanReadableName: "Learning Kurwa"
   },
   RESTRICTIONS: {
     name: "restrictions",
-    weight: 0.35
+    weight: 0.35,
+    humanReadableName: "Restrictions"
   },
   GITHUB: {
     name: "github",
-    weight: 0.7
+    weight: 0.7,
+    humanReadableName: "GitHub"
   },
   STACKOVERFLOW: {
     name: "stackoverflow",
-    weight: 0.85
+    weight: 0.85,
+    humanReadableName: "StackOverflow"
   },
   TUTORIALS: {
     name: "tutorials",
-    weight: 0.95
+    weight: 0.95,
+    humanReadableName: "Tutorials"
   },
   PERFORMANCE_TTI: {
     name: "performance_tti",
-    weight: 0.2
+    weight: 0.2,
+    humanReadableName: "Performance"
   }
 };
 

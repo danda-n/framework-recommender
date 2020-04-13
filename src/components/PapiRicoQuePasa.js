@@ -1,46 +1,51 @@
 import React, { useState, useRef } from "react";
 import { ATTRIBUTE, frameworks } from "../frameworkData";
+import shuffle from "lodash.shuffle";
+
+const xD = [
+  [1, 2, 3],
+  [1, 2, 4],
+  [1, 2, 5],
+  [1, 2, 6],
+  [1, 2, 7],
+  [1, 3, 4],
+  [1, 3, 5],
+  [1, 3, 6],
+  [1, 3, 7],
+  [1, 4, 5],
+  [1, 4, 6],
+  [1, 4, 7],
+  [1, 5, 6],
+  [1, 5, 7],
+  [1, 6, 7],
+  [2, 3, 4],
+  [2, 3, 5],
+  [2, 3, 6],
+  [2, 3, 7],
+  [2, 4, 5],
+  [2, 4, 6],
+  [2, 4, 7],
+  [2, 5, 6],
+  [2, 5, 7],
+  [2, 6, 7],
+  [3, 4, 5],
+  [3, 4, 6],
+  [3, 4, 7],
+  [3, 5, 6],
+  [3, 5, 7],
+  [3, 6, 7],
+  [4, 5, 6],
+  [4, 5, 7],
+  [4, 6, 7],
+  [5, 6, 7]
+];
 
 const generateQuestions = () => {
-  let bestQuestionSet = [];
-  for (let j = 0; j < 100; j++) {
-    const questions = [];
-    const attributePool = Object.keys(ATTRIBUTE).map(key => ({
-      name: ATTRIBUTE[key].name,
-      remaining: 7
-    }));
-    let isDone = false;
-    while (!isDone) {
-      const includedAttrributeNames = [];
-      for (let i = 0; i < 3; i++) {
-        const remainingAttributes = attributePool.filter(
-          attributeData =>
-            attributeData.remaining > 0 &&
-            !includedAttrributeNames.includes(attributeData.name)
-        );
-        if (!remainingAttributes.length) {
-          isDone = true;
-          break;
-        }
-        const index = Math.floor(Math.random() * remainingAttributes.length);
-        const attribute = remainingAttributes[index];
-        attribute.remaining--;
-        includedAttrributeNames.push(attribute.name);
-      }
-      if (includedAttrributeNames.length !== 3) break;
-      if (
-        questions.some(question =>
-          question.every(name => includedAttrributeNames.includes(name))
-        )
-      )
-        continue;
-      questions.push(includedAttrributeNames);
-    }
-    if (questions.length > bestQuestionSet.length) {
-      bestQuestionSet = questions;
-    }
-  }
-  return bestQuestionSet;
+  const attributeNames = Object.keys(ATTRIBUTE).map(key => ATTRIBUTE[key].name);
+  const combinations = xD.map(combination =>
+    shuffle(combination.map(index => attributeNames[index - 1]))
+  );
+  return shuffle(combinations);
 };
 
 const questions = generateQuestions();
@@ -55,9 +60,51 @@ export default function Papi({ shouldApplyWeight }) {
   const result = useRef(
     Object.keys(ATTRIBUTE).map(key => ({
       name: ATTRIBUTE[key].name,
-      score: 7
+      score: 15
     }))
   );
+
+  const calculateResults = () => {
+    const scoreArray = [];
+    for (const framework of frameworks) {
+      let score = 0;
+      for (const attributeData of result.current) {
+        let attributeScore = 0;
+        const answerValue = attributeData.score * 3.33;
+        const frameworkValue = framework.attributeValues.find(
+          attributeValue => attributeValue.attribute.name === attributeData.name
+        ).value;
+        const deviation = frameworkValue - answerValue;
+        const absoluteDeviation = Math.abs(deviation);
+        if (deviation < 0) {
+          for (let i = 0; i < absoluteDeviation; i++) {
+            attributeScore -= 1 / (absoluteDeviation - i + 5);
+          }
+        } else {
+          for (let i = 0; i < absoluteDeviation; i++) {
+            attributeScore += 1 / (i + 5);
+          }
+        }
+        if (shouldApplyWeight) {
+          attributeScore *= Object.keys(ATTRIBUTE)
+            .map(key => ATTRIBUTE[key])
+            .find(d => d.name === attributeData.name).weight;
+        }
+        score += attributeScore;
+      }
+      scoreArray.push({ framework, score });
+    }
+    scoreArray.sort((a, b) => {
+      if (a.score < b.score) {
+        return 1;
+      }
+      if (a.score > b.score) {
+        return -1;
+      }
+      return 0;
+    });
+    setFrameworkScores(scoreArray);
+  };
 
   if (isFlowComplete) {
     return (
@@ -93,12 +140,21 @@ export default function Papi({ shouldApplyWeight }) {
         <hr />
         <div className="page-recommendation">
           <div className="page-question">
-            <h3>What u want most or least</h3>
+            <h3>
+              What u want most or least ({currentQuestionIndex + 1}/
+              {questions.length})
+            </h3>
           </div>
           <div className="page-answers">
             {currentQuestionData.map((attributeName, i) => (
               <div key={i} className="page-answer">
-                <div onClick={() => {}}>{attributeName}</div>
+                <div onClick={() => {}}>
+                  {
+                    Object.keys(ATTRIBUTE)
+                      .map(key => ATTRIBUTE[key])
+                      .find(d => d.name === attributeName).humanReadableName
+                  }
+                </div>
                 <button
                   className={leastWantedIndex === i ? "active" : ""}
                   onClick={() => {
@@ -138,56 +194,22 @@ export default function Papi({ shouldApplyWeight }) {
             ).score++;
             if (currentQuestionIndex === questions.length - 1) {
               setIsFlowComplete(true);
-              const scoreArray = [];
-              for (const framework of frameworks) {
-                let score = 0;
-                for (const attributeData of result.current) {
-                  let answerScore = 0;
-                  const answerValue = attributeData.score * 10;
-                  const frameworkValue = framework.attributeValues.find(
-                    attributeValue =>
-                      attributeValue.attribute.name === attributeData.name
-                  ).value;
-                  const deviation = frameworkValue - answerValue;
-                  const absoluteDeviation = Math.abs(deviation);
-                  if (deviation < 0) {
-                    for (let i = 0; i < absoluteDeviation; i++) {
-                      answerScore -= 1 / (absoluteDeviation - i + 5);
-                    }
-                  } else {
-                    for (let i = 0; i < absoluteDeviation; i++) {
-                      answerScore += 1 / (i + 5);
-                    }
-                  }
-                  if (shouldApplyWeight) {
-                    answerScore *= Object.keys(ATTRIBUTE)
-                      .map(key => ATTRIBUTE[key])
-                      .find(d => d.name === attributeData.name).weight;
-                  }
-                  score += answerScore;
-                }
-                scoreArray.push({ framework, score });
-              }
-              scoreArray.sort((a, b) => {
-                if (a.score < b.score) {
-                  return 1;
-                }
-                if (a.score > b.score) {
-                  return -1;
-                }
-                return 0;
-              });
-              console.log(scoreArray);
-              setFrameworkScores(scoreArray);
+              calculateResults();
             } else {
+              calculateResults();
               setCurrentQuestionIndex(currentQuestionIndex + 1);
-              setLeastWantedIndex(null);
-              setMostWantedIndex(null);
+              //setLeastWantedIndex(null);
+              //setMostWantedIndex(null);
             }
           }}
         >
           proceed
         </button>
+        {frameworkScores.map(frameworkScore => (
+          <div>
+            {`${frameworkScore.framework.name}: ${frameworkScore.score}`}
+          </div>
+        ))}
       </div>
     </div>
   );

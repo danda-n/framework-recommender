@@ -7,7 +7,7 @@ export const ATTRIBUTE = {
   LEARNING_CURVE: {
     name: "learning_curve",
     weight: 0.5,
-    humanReadableName: "Learning Kurwa"
+    humanReadableName: "Learning curve"
   },
   RESTRICTIONS: {
     name: "restrictions",

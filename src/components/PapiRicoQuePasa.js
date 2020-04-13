@@ -198,8 +198,8 @@ export default function Papi({ shouldApplyWeight }) {
             } else {
               calculateResults();
               setCurrentQuestionIndex(currentQuestionIndex + 1);
-              //setLeastWantedIndex(null);
-              //setMostWantedIndex(null);
+              setLeastWantedIndex(null);
+              setMostWantedIndex(null);
             }
           }}
         >

@@ -311,7 +311,7 @@ export default function Flowchart() {
       setQuestionIndex(questionIndex + 1);
     }
   };
-  console.log(frameworkScores);
+
   if (isFlowComplete) {
     return (
       <div className="page-container">
@@ -347,13 +347,13 @@ export default function Flowchart() {
           <div className="page-answers">
             {currentQuestionData.answers.map((answer, i) => (
               <div key={i} className="page-answer">
-                <a
+                <div
                   onClick={() => {
                     selectAnswer(answer.value);
                   }}
                 >
                   {answer.text}
-                </a>
+                </div>
               </div>
             ))}
           </div>

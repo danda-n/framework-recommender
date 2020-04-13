@@ -5,6 +5,7 @@ import FrameworkPage_new from "./components/FrameworkPage_new";
 import HomePage from "./components/HomePage";
 import Flowchart from "./components/Flowchart";
 import Layout from "./components/Layout";
+import Papi from "./components/PapiRicoQuePasa";
 
 export default function App() {
   return (
@@ -13,6 +14,10 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/flowchart" component={Flowchart} />
+          <Route path="/papi" component={Papi} />
+          <Route path="/solution">
+            <Papi shouldApplyWeight></Papi>
+          </Route>
           <Route path="/frameworks/:title" component={FrameworkPage_new} />
         </Switch>
       </Layout>

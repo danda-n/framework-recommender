@@ -63,3 +63,7 @@
   margin: 1em auto;
   width: 60%;
 }
+
+.active {
+  border-color: green;
+}

@@ -14,9 +14,11 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/flowchart" component={Flowchart} />
-          <Route path="/papi" component={Papi} />
+          <Route path="/papi">
+            <Papi key="papi"></Papi>
+          </Route>
           <Route path="/solution">
-            <Papi shouldApplyWeight></Papi>
+            <Papi key="solution" shouldApplyWeight></Papi>
           </Route>
           <Route path="/frameworks/:title" component={FrameworkPage_new} />
         </Switch>

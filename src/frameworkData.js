@@ -2,37 +2,41 @@ export const ATTRIBUTE = {
   DOCUMENTATION: {
     name: "documentation",
     weight: 0.45,
-    humanReadableName: "Documentation"
+    humanReadableName: "I find high level of documentation important."
   },
   LEARNING_CURVE: {
     name: "learning_curve",
     weight: 0.5,
-    humanReadableName: "Learning curve"
+    humanReadableName: "I like to try a challenge in terms of learning."
   },
   RESTRICTIONS: {
     name: "restrictions",
     weight: 0.35,
-    humanReadableName: "Restrictions"
+    humanReadableName:
+      "I prefer to do things my way and not be restricted by constraints."
   },
   GITHUB: {
     name: "github",
     weight: 0.7,
-    humanReadableName: "GitHub"
+    humanReadableName: "I am passionate about GitHub standing of framework."
   },
   STACKOVERFLOW: {
     name: "stackoverflow",
     weight: 0.85,
-    humanReadableName: "StackOverflow"
+    humanReadableName:
+      "It is important to me that the framework has large StackOverflow backing."
   },
   TUTORIALS: {
     name: "tutorials",
     weight: 0.95,
-    humanReadableName: "Tutorials"
+    humanReadableName:
+      "I want to have a substantial amount of tutorials and alternatives."
   },
   PERFORMANCE_TTI: {
     name: "performance_tti",
     weight: 0.2,
-    humanReadableName: "Performance"
+    humanReadableName:
+      "The 'Time to Interactive' merit in performance is essential for me."
   }
 };
 

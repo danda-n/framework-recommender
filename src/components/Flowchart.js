@@ -246,12 +246,11 @@ const questions = [
     attribute: ATTRIBUTE.TUTORIALS
   },
   {
-    questionText: "performance tti?",
+    questionText: "Is the performance quintessential part of the project?",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 },
-      { text: "fourth quartile", value: 100 }
+      { text: "Not at all.", value: 0 },
+      { text: "Maybe.", value: 50 },
+      { text: "Absolutely.", value: 100 }
     ],
     attribute: ATTRIBUTE.PERFORMANCE_TTI
   }
@@ -338,7 +337,7 @@ export default function Flowchart() {
   return (
     <div className="page-container">
       <div className="page-flow">
-        <h1>Attribute based recommendation</h1>
+        <h1>Attribute-weight based recommendation</h1>
         <hr />
         <div className="page-recommendation">
           <div className="page-question">

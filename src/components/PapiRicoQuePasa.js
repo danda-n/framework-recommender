@@ -134,15 +134,15 @@ export default function Papi({ shouldApplyWeight }) {
       <div className="page-flow">
         <h1>
           {shouldApplyWeight
-            ? "The Final Solution"
-            : "Attribute based recommendation"}
+            ? "Combination of PAPI based and attribute-weight based recommendation"
+            : "PAPI testing based recommendation"}
         </h1>
         <hr />
         <div className="page-recommendation">
           <div className="page-question">
             <h3>
-              What u want most or least ({currentQuestionIndex + 1}/
-              {questions.length})
+              Please choose which statement you value the most and the least. (
+              {currentQuestionIndex + 1}/{questions.length})
             </h3>
           </div>
           <div className="page-answers">
@@ -164,7 +164,7 @@ export default function Papi({ shouldApplyWeight }) {
                     setLeastWantedIndex(i);
                   }}
                 >
-                  least
+                  Least
                 </button>
                 <button
                   className={mostWantedIndex === i ? "active" : ""}
@@ -175,7 +175,7 @@ export default function Papi({ shouldApplyWeight }) {
                     setMostWantedIndex(i);
                   }}
                 >
-                  most
+                  Most
                 </button>
               </div>
             ))}
@@ -203,7 +203,7 @@ export default function Papi({ shouldApplyWeight }) {
             }
           }}
         >
-          proceed
+          Proceed
         </button>
         {frameworkScores.map(frameworkScore => (
           <div>

@@ -6,7 +6,7 @@ export const ATTRIBUTE = {
   },
   LEARNING_CURVE: {
     name: "learning_curve",
-    weight: 0.5,
+    weight: 0.6,
     humanReadableName: "I like to try a challenge in terms of learning."
   },
   RESTRICTIONS: {
@@ -17,7 +17,7 @@ export const ATTRIBUTE = {
   },
   GITHUB: {
     name: "github",
-    weight: 0.7,
+    weight: 0.5,
     humanReadableName: "I am passionate about GitHub standing of framework."
   },
   STACKOVERFLOW: {
@@ -34,7 +34,7 @@ export const ATTRIBUTE = {
   },
   PERFORMANCE_TTI: {
     name: "performance_tti",
-    weight: 0.2,
+    weight: 1.0,
     humanReadableName:
       "The 'Time to Interactive' merit in performance is essential for me."
   }
@@ -44,7 +44,9 @@ export const FRAMEWORK = {
   REACT: "react",
   VUE: "vue",
   EMBER: "ember",
-  ANGULAR: "angular"
+  ANGULAR: "angular",
+  SVELTE: "svelte",
+  KNOCKOUT: "knockout"
 };
 
 export const frameworks = [
@@ -181,6 +183,74 @@ export const frameworks = [
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
         value: 69
+      }
+    ]
+  },
+  {
+    name: FRAMEWORK.SVELTE,
+    link: "Svelte",
+    attributeValues: [
+      {
+        attribute: ATTRIBUTE.DOCUMENTATION,
+        value: 90
+      },
+      {
+        attribute: ATTRIBUTE.LEARNING_CURVE,
+        value: 70
+      },
+      {
+        attribute: ATTRIBUTE.RESTRICTIONS,
+        value: 65
+      },
+      {
+        attribute: ATTRIBUTE.GITHUB,
+        value: 20
+      },
+      {
+        attribute: ATTRIBUTE.STACKOVERFLOW,
+        value: 0.34
+      },
+      {
+        attribute: ATTRIBUTE.TUTORIALS,
+        value: 95
+      },
+      {
+        attribute: ATTRIBUTE.PERFORMANCE_TTI,
+        value: 200
+      }
+    ]
+  },
+  {
+    name: FRAMEWORK.KNOCKOUT,
+    link: "Knockout",
+    attributeValues: [
+      {
+        attribute: ATTRIBUTE.DOCUMENTATION,
+        value: 95
+      },
+      {
+        attribute: ATTRIBUTE.LEARNING_CURVE,
+        value: 85
+      },
+      {
+        attribute: ATTRIBUTE.RESTRICTIONS,
+        value: 50
+      },
+      {
+        attribute: ATTRIBUTE.GITHUB,
+        value: 6
+      },
+      {
+        attribute: ATTRIBUTE.STACKOVERFLOW,
+        value: 10
+      },
+      {
+        attribute: ATTRIBUTE.TUTORIALS,
+        value: 90
+      },
+      {
+        attribute: ATTRIBUTE.PERFORMANCE_TTI,
+        value: 100
       }
     ]
   }

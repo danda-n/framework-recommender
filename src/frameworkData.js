@@ -80,7 +80,7 @@ export const frameworks = [
       },
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
-        value: 91
+        value: 59
       }
     ]
   },
@@ -114,7 +114,7 @@ export const frameworks = [
       },
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
-        value: 100
+        value: 92
       }
     ]
   },
@@ -148,7 +148,7 @@ export const frameworks = [
       },
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
-        value: 44
+        value: 30
       }
     ]
   },
@@ -182,7 +182,7 @@ export const frameworks = [
       },
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
-        value: 69
+        value: 52
       }
     ]
   },
@@ -250,7 +250,7 @@ export const frameworks = [
       },
       {
         attribute: ATTRIBUTE.PERFORMANCE_TTI,
-        value: 100
+        value: 56
       }
     ]
   }

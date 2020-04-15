@@ -36,7 +36,7 @@ export const ATTRIBUTE = {
     name: "performance_tti",
     weight: 1.0,
     humanReadableName:
-      "The 'Time to Interactive' merit in performance is essential for me."
+      "The average performance measure is an essential value for me."
   }
 };
 

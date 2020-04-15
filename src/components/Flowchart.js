@@ -197,12 +197,15 @@ const questions = [
     attribute: ATTRIBUTE.DOCUMENTATION
   },
   {
-    questionText: "learning curve?",
+    questionText: "Is the project in swift need of a framework implementation?",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 },
-      { text: "fourth quartile", value: 100 }
+      { text: "No, there is time for implementation.", value: 25 },
+      {
+        text:
+          "It is not of the great importance, but should not take a very long time.",
+        value: 50
+      },
+      { text: "Yes, quick framework integration is needed.", value: 100 }
     ],
     attribute: ATTRIBUTE.LEARNING_CURVE
   },
@@ -216,27 +219,30 @@ const questions = [
     attribute: ATTRIBUTE.RESTRICTIONS
   },
   {
-    questionText: "github stars?",
+    questionText: "Does GitHub popularity of a framework provide value?",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 },
-      { text: "fourth quartile", value: 100 }
+      { text: "Not at all.", value: 0 },
+      { text: "Barely.", value: 25 },
+      { text: "Maybe sometimes.", value: 50 },
+      { text: "It is relevant.", value: 75 },
+      { text: "Yes, a lot", value: 100 }
     ],
     attribute: ATTRIBUTE.GITHUB
   },
   {
-    questionText: "stackoverflow stars?",
+    questionText:
+      "Does StackOverflow community and amount of questions provide value?",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 },
-      { text: "fourth quartile", value: 100 }
+      { text: "Not at all.", value: 0 },
+      { text: "Barely.", value: 25 },
+      { text: "Maybe sometimes.", value: 50 },
+      { text: "It is relevant.", value: 75 },
+      { text: "Yes, a lot.", value: 100 }
     ],
     attribute: ATTRIBUTE.STACKOVERFLOW
   },
   {
-    questionText: "tutorials?",
+    questionText: "Tutorials",
     answers: [
       { text: "first quartile", value: 25 },
       { text: "second quartile", value: 50 },

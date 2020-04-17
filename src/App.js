@@ -5,7 +5,7 @@ import FrameworkPage_new from "./components/FrameworkPage_new";
 import HomePage from "./components/HomePage";
 import Flowchart from "./components/Flowchart";
 import Layout from "./components/Layout";
-import Papi from "./components/PapiRicoQuePasa";
+import Papi from "./components/Flowchart_v2";
 
 export default function App() {
   return (

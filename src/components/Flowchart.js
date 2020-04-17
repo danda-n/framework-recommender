@@ -212,9 +212,9 @@ const questions = [
   {
     questionText: "restrictions?",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 }
+      { text: "Absolutely no!", value: 33 },
+      { text: "Don't really care", value: 66 },
+      { text: "Yes!", value: 100 }
     ],
     attribute: ATTRIBUTE.RESTRICTIONS
   },
@@ -244,10 +244,10 @@ const questions = [
   {
     questionText: "Tutorials",
     answers: [
-      { text: "first quartile", value: 25 },
-      { text: "second quartile", value: 50 },
-      { text: "third quartile", value: 75 },
-      { text: "fourth quartile", value: 100 }
+      { text: "Not needed.", value: 25 },
+      { text: "Maybe a few", value: 50 },
+      { text: "Some would be nice", value: 75 },
+      { text: "Yes, a lot", value: 100 }
     ],
     attribute: ATTRIBUTE.TUTORIALS
   },

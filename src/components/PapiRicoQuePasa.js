@@ -134,7 +134,7 @@ export default function Papi({ shouldApplyWeight }) {
       <div className="page-flow">
         <h1>
           {shouldApplyWeight
-            ? "Combination of PAPI based and attribute-weight based recommendation"
+            ? "Variation of PAPI based and attribute-weight based recommendation"
             : "PAPI testing based recommendation"}
         </h1>
         <hr />
